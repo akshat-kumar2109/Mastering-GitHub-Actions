@@ -2,4 +2,9 @@ name: Chapter_2_Build_with_no_cache
 on: workflow_dispatch
 jobs:
   build:
-    uses: Chapter 2/.github/workflows/build-with-no-cache.yml@main
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Using local workflow
+        uses: ./Chapter 2/.github/workflows/build-with-no-cache.yml@main
