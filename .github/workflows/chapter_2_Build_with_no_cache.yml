@@ -4,5 +4,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.2
+        with:
+          submodules: true
       - name: Using local workflow
         uses: akshat-kumar2109/Mastering-GitHub-Actions/Chapter 2/.github/workflows/build-with-no-cache.yml@main
